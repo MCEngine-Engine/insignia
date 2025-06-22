@@ -1,0 +1,6 @@
+name: MCEngineInsignia
+version: ${version}
+main: io.github.mcengine.spigotmc.insignia.engine.MCEngineInsigniaSpigotMC
+author: MCEngine
+description: MCEngine Insignia
+api-version: 1.13
