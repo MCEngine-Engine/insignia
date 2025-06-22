@@ -21,6 +21,20 @@ public class MCEngineInsigniaSpigotMC extends JavaPlugin {
             return;
         }
 
+        // Load extensions
+        MCEngineApi.loadExtensions(
+            this,
+            "io.github.mcengine.api.insignia.addon.IMCEngineInsigniaAddOn",
+            "addons",
+            "AddOn"
+            );
+        MCEngineApi.loadExtensions(
+            this,
+            "io.github.mcengine.api.insignia.dlc.IMCEngineInsigniaDLC",
+            "dlcs",
+            "DLC"
+            );
+
         MCEngineApi.checkUpdate(this, getLogger(), "github", "MCEngine", "insignia-engine", getConfig().getString("github.token", "null"));
     }
 
