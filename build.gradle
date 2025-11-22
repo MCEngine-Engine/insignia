@@ -95,8 +95,8 @@ allprojects {
                 name = repoName
                 url = uri(repoUrl)
                 credentials {
-                    username = project.user_git_name
-                    password = project.user_github_token ?: project.repository_token ?: project.organization_token
+                    username = agent_github_name ?: user_github_name ?: repository_name?: organization_name
+                    password = agent_github_token ?: user_github_token ?: repository_token ?: organization_token
                 }
             }
         }
